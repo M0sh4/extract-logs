@@ -25,16 +25,23 @@ def upload_logs_to_s3(log_directory, bucket_name):
     try:
         start_time = time.time()
         files_count = 0
+        errors_count = 0
         for root, dir, files in os.walk(log_directory):
             for file in files:
-                files_count+=1
                 if file.startswith(log_name_filter):
                     hour = get_hour_minute(file)
                     if int(hour) == cut_off_time.hour:
-                        print(os.path.join(root, file))
-                        file_path = os.path.join(root, file)
-                        upload_to_s3(file_path, bucket_name)
-        print(now,"Archivos subidos:",files_count)
+                        try:
+                            files_count+=1
+                            print(os.path.join(root, file))
+                            file_path = os.path.join(root, file)
+                            upload_to_s3(file_path, bucket_name)
+                        except e:
+                            errors_count+=1
+                            print(e)
+                            
+        print(now,"Archivos subidos: ",files_count)
+        print(now, "Archivos errados: ", errors_count)
         print(now, "Time: ", time.time() - start_time)
     except Exception as e:
         print(now, f"Ocurrio un error al filtrar archivos: {str(e)}")
