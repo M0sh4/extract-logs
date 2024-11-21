@@ -25,7 +25,7 @@ def upload_logs_to_s3(log_directory, bucket_name):
     try:
         start_time = time.time()
         files_count = 0
-        for root, files in os.walk(log_directory):
+        for root, dir, files in os.walk(log_directory):
             for file in files:
                 files_count+=1
                 if file.startswith(log_name_filter):

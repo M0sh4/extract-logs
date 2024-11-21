@@ -4,4 +4,4 @@ logfile="/var/opt/extract-logs-dry-run/pago-credito-fcompartamos/logs/logs_extra
 
 source /var/opt/extract-logs-dry-run/env/bin/activate
 
-/usr/bin/python3.9 /var/opt/extract-logs-dry-run/pago-credito-fcompartamos/extract-logs.py >> "$logfile" 2>&1
+python /var/opt/extract-logs-dry-run/pago-credito-fcompartamos/extract-logs.py >> "$logfile" 2>&1
