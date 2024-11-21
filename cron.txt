@@ -1,2 +1,2 @@
-* * * * * /var/opt/extract-logs-dry-run/cashin-prod/extract-logs.sh
-* * * * * /var/opt/extract-logs-dry-run/pago-credito-fcompartamos/extract-logs.sh
+00 * * * * /var/opt/extract-logs-dry-run/cashin-prod/extract-logs.sh
+00 * * * * /var/opt/extract-logs-dry-run/pago-credito-fcompartamos/extract-logs.sh

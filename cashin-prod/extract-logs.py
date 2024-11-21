@@ -39,7 +39,7 @@ def upload_logs_to_s3(log_directory, bucket_name):
         print(now, "Time: ", time.time() - start_time)
     except Exception as e:
         print(now, f"Ocurrio un error al filtrar archivos: {str(e)}")
-                
+
 def get_hour_minute(log_name):
     hour_minute = log_name[-5:]
     return hour_minute.split("-")[0]
