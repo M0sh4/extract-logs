@@ -6,4 +6,4 @@ source /var/opt/extract-logs-dry-run/env/bin/activate
 
 python /var/opt/extract-logs-dry-run/pago-credito-fcompartamos/extract-logs.py >> "$logfile" 2>&1
 
-deactive
+deactivate
