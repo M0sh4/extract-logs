@@ -5,3 +5,5 @@ logfile="/var/opt/extract-logs-dry-run/cashin-prod/logs/logs_extract_$(date +%Y%
 source /var/opt/extract-logs-dry-run/env/bin/activate
 
 python /var/opt/extract-logs-dry-run/cashin-prod/extract-logs.py >> "$logfile" 2>&1
+
+deactive
