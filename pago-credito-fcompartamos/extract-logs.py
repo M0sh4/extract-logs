@@ -10,6 +10,7 @@ now = datetime.now()
 print(now)
 cut_off_time = now - timedelta(hours=1)
 log_name_filter = f"log_mdw_pdp.log.{cut_off_time.year}-{cut_off_time.month:02}-{cut_off_time.day:02}"
+os.environ['AWS_SHARED_CREDENTIALS_FILE'] = '/dev/null' #ayuda a no usar ninguna credencial configurada por default en la pc/servidor
 
 s3_client = boto3.client('s3')
 prefix = f"{service_name}/{cut_off_time.year}/{cut_off_time.month:02}/{cut_off_time.day:02}/{cut_off_time.hour}/"
