@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 import time
 
 bucket_name = 'pdp-exported-logs'
-log_directory = 'log'
+log_directory = 'logs'
 service_name = 'pago-credito-fcompartamos'
 now = datetime.now()
 print(now)

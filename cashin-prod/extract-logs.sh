@@ -1,4 +1,4 @@
-cd /var/opt/extract-logs-dry-run/
+cd /var/opt/cashin-prod/
 
 logfile="/var/opt/extract-logs-dry-run/cashin-prod/logs/logs_extract_$(date +%Y%m%d).log"
 

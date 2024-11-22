@@ -1,4 +1,4 @@
-cd /var/opt/extract-logs-dry-run/
+cd /var/opt/pago_credito_fcompartamos/
 
 logfile="/var/opt/extract-logs-dry-run/pago-credito-fcompartamos/logs/logs_extract_$(date +%Y%m%d).log"
 
